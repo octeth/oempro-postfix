@@ -1,0 +1,26 @@
+# Basic configurations
+myhostname = localhost
+mydomain = localdomain
+myorigin = $mydomain
+inet_interfaces = all
+inet_protocols = all
+
+# Restrict mail relaying
+smtpd_recipient_restrictions = permit_mynetworks, reject_unauth_destination
+
+# Network settings
+mynetworks = 127.0.0.0/8, 192.168.99.0/24
+
+# Directories
+queue_directory = /var/spool/postfix
+command_directory = /usr/sbin
+daemon_directory = /usr/lib/postfix/sbin
+
+# Mailbox
+home_mailbox = Maildir/
+
+# Misc
+smtpd_banner = $myhostname ESMTP $mail_name (Debian/GNU)
+biff = no
+append_dot_mydomain = no
+
