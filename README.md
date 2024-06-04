@@ -14,7 +14,7 @@ Run the container:
 
 ```bash
 # If this container is going to be running on Octeth's server, run this command:
-docker run -d --name octeth-postfix --network oempro-network -p 2526:25 octeth-postfix
+docker run -d --name octeth-postfix --network oempro-network --dns 1.1.1.1 --dns 8.8.8.8 --dns 8.8.4.4 -p 2526:25 octeth-postfix
 ```
 
 In Octeth's delivery server settings;
