@@ -20,7 +20,19 @@ daemon_directory = /usr/lib/postfix/sbin
 home_mailbox = Maildir/
 
 # Misc
-smtpd_banner = $myhostname ESMTP $mail_name (Debian/GNU)
+smtpd_banner = $myhostname ESMTP $mail_name (Octeth)
 biff = no
 append_dot_mydomain = no
 
+# Log settings for Postfix
+maillog_file = /var/log/mail.log
+
+# Debugging settings
+debug_peer_list = bastionflowe.com
+debug_peer_level = 2
+
+# DNS settings
+smtp_host_lookup = dns
+smtp_connect_timeout = 30s
+smtp_connection_cache_on_demand = no
+smtp_dns_support_level = dnssec
