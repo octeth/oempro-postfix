@@ -28,8 +28,8 @@ append_dot_mydomain = no
 maillog_file = /var/log/mail.log
 
 # Debugging settings
-debug_peer_list = bastionflowe.com
-debug_peer_level = 2
+#debug_peer_list = mydomain.com
+#debug_peer_level = 2
 
 # DNS settings
 smtp_host_lookup = dns
