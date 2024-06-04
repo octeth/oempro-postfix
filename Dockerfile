@@ -2,7 +2,7 @@
 FROM debian:latest
 
 # Install Postfix
-RUN apt-get update && apt-get install -y postfix dnsutils telnet wget
+RUN apt-get update && apt-get install -y postfix dnsutils telnet wget vim
 
 # Copy the configuration file into the container
 COPY main.cf /etc/postfix/main.cf
